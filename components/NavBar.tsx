@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { FileDown, FileDownIcon, Menu, X } from 'lucide-react'
 import { navLinks } from '@/data/nav'
 
 const NavBar = () => {
@@ -37,14 +37,13 @@ const NavBar = () => {
                 {link.label}
               </a>
             ))}
-            {/* Download CV Button */}
-            <a
-              href='/AceBorja_CV.pdf' // Update this path to your actual CV file
+            <Link
+              href='/resume/Borja_Eduardo_Ace_Resume.pdf'
               download
-              className='rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-500'
+              className='rounded-lg bg-teal-300 px-4 py-2 text-sm font-semibold text-black transition hover:bg-teal-500 inline-flex items-center gap-0.5'
             >
               Download CV
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -73,7 +72,7 @@ const NavBar = () => {
               </a>
             ))}
             <a
-              href='/AceBorja_CV.pdf' // Update this path to your actual CV file
+              href='/resume/Borja_Eduardo_Ace_Resume.pdf' // Update this path to your actual CV file
               download
               className='mt-4 rounded-lg bg-blue-600 px-4 py-2 text-center text-lg font-semibold text-white transition hover:bg-blue-500'
             >
