@@ -13,7 +13,7 @@ const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
         alt={`Preview of ${project.title}`}
         width={600}
         height={337}
-        className='object-cover w-full h-full'
+        className='object-cover object-left-top w-full h-full'
       />
     </div>
 
@@ -26,7 +26,7 @@ const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
         {project.technologies.map((tech) => (
           <span
             key={tech}
-            className='rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-200'
+            className='rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-300'
           >
             {tech}
           </span>
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
             className='flex items-center gap-2 text-sm font-semibold text-foreground hover:text-blue-500 transition'
           >
             <ExternalLink size={18} />
-            Live Demo
+            Link
           </a>
         )}
       </div>
@@ -68,7 +68,7 @@ const Projects = () => {
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
-          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-blue-500'>
+          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-cyan-300'>
             Portfolio
           </p>
 
@@ -76,8 +76,8 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className='mt-6 text-muted-foreground'>
-            A selection of my best work showcasing my full-stack capabilities
-            and design sense.
+            A selection of my best work showcasing my developer capabilities and
+            design sense.
           </p>
         </div>
 

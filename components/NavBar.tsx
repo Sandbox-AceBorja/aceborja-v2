@@ -22,7 +22,7 @@ const NavBar = () => {
             href='/'
             className='text-2xl font-bold text-foreground hover:text-blue-500 transition'
           >
-            Ace Borja<span className='text-blue-500'>.</span>
+            Ace Borja<span className='text-cyan-300'>.</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -40,7 +40,7 @@ const NavBar = () => {
             <Link
               href='/resume/Borja_Eduardo_Ace_Resume.pdf'
               download
-              className='rounded-lg bg-teal-300 px-4 py-2 text-sm font-semibold text-black transition hover:bg-teal-500 inline-flex items-center gap-0.5'
+              className='rounded-lg bg-cyan-300 px-4 py-2 text-sm font-semibold text-black transition hover:bg-cyan-400 inline-flex items-center gap-0.5'
             >
               Download CV
             </Link>
@@ -65,7 +65,7 @@ const NavBar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className='block text-lg font-medium text-foreground hover:text-blue-500 transition py-2'
+                className='block text-lg font-medium text-foreground hover:text-cyan-500 transition py-2'
                 onClick={handleLinkClick}
               >
                 {link.label}
@@ -74,7 +74,7 @@ const NavBar = () => {
             <a
               href='/resume/Borja_Eduardo_Ace_Resume.pdf' // Update this path to your actual CV file
               download
-              className='mt-4 rounded-lg bg-blue-600 px-4 py-2 text-center text-lg font-semibold text-white transition hover:bg-blue-500'
+              className='mt-4 rounded-lg bg-cyan-300 px-4 py-2 text-center text-lg font-semibold text-white transition hover:bg-cyan-400'
             >
               Download CV
             </a>

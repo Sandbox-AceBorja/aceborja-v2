@@ -4,6 +4,7 @@ import './globals.css'
 import StarField from '@/components/bg/StarField'
 import Aurora from '@/components/bg/Aurora'
 import NavBar from '@/components/NavBar'
+import { motion } from 'framer-motion'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -31,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' className={'scroll-smooth'}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} overflow-y-scroll overflow-x-hidden dark`}
       >

@@ -14,7 +14,7 @@ const ExperienceItem: React.FC<{ item: ExperienceType }> = ({ item }) => (
     {/* <div className='absolute left-0 sm:left-20 top-0 bottom-0 w-px bg-border group-last:h-1/2' /> */}
 
     {/* Bullet Point */}
-    <div className='absolute left-0 sm:left-20 top-7 w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center text-white'>
+    <div className='absolute left-0 sm:left-20 top-7 w-5 h-5 rounded-full bg-cyan-700 flex items-center justify-center text-white'>
       <Briefcase size={12} />
     </div>
 
@@ -27,7 +27,7 @@ const ExperienceItem: React.FC<{ item: ExperienceType }> = ({ item }) => (
       </h3>
     </div>
 
-    <p className='mt-1 text-xs font-semibold text-blue-300'>{item.company}</p>
+    <p className='mt-1 text-xs font-semibold text-cyan-500'>{item.company}</p>
 
     <p className='mt-3 text-xs tracking-wider font-light text-muted-foreground'>
       {item.description}
@@ -78,7 +78,7 @@ const Experience = () => {
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
-          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-blue-500'>
+          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-cyan-300'>
             My Journey
           </p>
 
@@ -98,7 +98,7 @@ const Experience = () => {
             <div className='flex justify-center mt-8'>
               <button
                 onClick={handleToggle}
-                className='inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-2 text-sm font-medium text-white shadow-lg transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                className='inline-flex items-center justify-center rounded-full bg-cyan-600 px-6 py-2 text-sm font-medium text-white shadow-lg transition-colors hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
               >
                 {isExpanded ? (
                   <>

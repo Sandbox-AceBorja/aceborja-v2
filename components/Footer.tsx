@@ -7,15 +7,17 @@ const Footer = () => {
   return (
     <footer className='border-t border-border mt-16 py-12'>
       <div className='mx-auto max-w-7xl px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
-        {/* Copyright */}
-        <p className='text-sm text-muted-foreground'>
-          &copy; {currentYear} Ace Borja. All rights reserved.
-        </p>
+        {/* Quick Links (Optional) */}
+        <div className='flex space-x-6 text-sm text-muted-foreground'>
+          <p className='text-sm font-semibold tracking-wider text-white'>
+            Designed & Built by Ace Borja
+          </p>
+        </div>
 
         {/* Social Links */}
         <div className='flex space-x-6'>
           <a
-            href='https://github.com/yourusername'
+            href='https://github.com/sandbox-aceborja'
             target='_blank'
             rel='noopener noreferrer'
             className='text-muted-foreground hover:text-foreground transition'
@@ -24,7 +26,7 @@ const Footer = () => {
             <Github size={20} />
           </a>
           <a
-            href='https://linkedin.com/in/yourusername'
+            href='https://linkedin.com/in/sandbox-aceborja'
             target='_blank'
             rel='noopener noreferrer'
             className='text-muted-foreground hover:text-foreground transition'
@@ -33,7 +35,7 @@ const Footer = () => {
             <Linkedin size={20} />
           </a>
           <a
-            href='https://twitter.com/yourusername'
+            href='https://x.com/AceBorja7'
             target='_blank'
             rel='noopener noreferrer'
             className='text-muted-foreground hover:text-foreground transition'
@@ -43,18 +45,10 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Quick Links (Optional) */}
-        <div className='flex space-x-6 text-sm text-muted-foreground'>
-          <a href='#hero' className='hover:text-foreground transition'>
-            Home
-          </a>
-          <a href='#about' className='hover:text-foreground transition'>
-            About
-          </a>
-          <a href='#projects' className='hover:text-foreground transition'>
-            Projects
-          </a>
-        </div>
+        {/* Copyright */}
+        <p className='text-sm text-muted-foreground'>
+          &copy; {currentYear} All rights reserved.
+        </p>
       </div>
     </footer>
   )

@@ -13,6 +13,7 @@ const coder = {
     'CodeIgniter',
     'Tailwind CSS',
     'MongoDB',
+    'MySQL',
     'Docker',
   ],
   hardWorker: true,
@@ -146,7 +147,7 @@ const About = () => {
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
-          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-blue-500'>
+          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-cyan-300'>
             About Me
           </p>
 
@@ -179,12 +180,6 @@ const About = () => {
             <p>
               I thrive on solving complex problems, continuously improving my
               craft, and designing intuitive user experiences.
-            </p>
-            <p>
-              Currently open to{' '}
-              <span className='font-medium text-foreground'>
-                freelance work, collaborations, and full-time opportunities
-              </span>
             </p>
           </div>
 
