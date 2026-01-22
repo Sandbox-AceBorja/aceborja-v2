@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { FileDown, FileDownIcon, Menu, X } from 'lucide-react'
 import { navLinks } from '@/data/nav'
+import * as gtag from '@/lib/gtag'
+import DownloadResume from './DownloadResume'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,13 +39,7 @@ const NavBar = () => {
                 {link.label}
               </a>
             ))}
-            <Link
-              href='/resume/Borja_Eduardo_Ace_Resume.pdf'
-              download
-              className='rounded-lg bg-cyan-300 px-4 py-2 text-sm font-semibold text-black transition hover:bg-cyan-400 inline-flex items-center gap-0.5'
-            >
-              Download CV
-            </Link>
+            <DownloadResume />
           </nav>
 
           {/* Mobile Menu Button */}
