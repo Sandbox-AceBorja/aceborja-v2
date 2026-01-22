@@ -5,6 +5,7 @@ import StarField from '@/components/bg/StarField'
 import Aurora from '@/components/bg/Aurora'
 import NavBar from '@/components/NavBar'
 import { motion } from 'framer-motion'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,6 +41,7 @@ export default function RootLayout({
         {/* <Aurora /> */}
         <NavBar />
         {children}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html>
   )
