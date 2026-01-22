@@ -70,6 +70,13 @@ const NavBar = () => {
             <a
               href='/resume/Borja_Eduardo_Ace_Resume.pdf' // Update this path to your actual CV file
               download
+              onClick={() =>
+                gtag.event({
+                  action: 'resume_download',
+                  category: 'engagement',
+                  label: 'Resume PDF',
+                })
+              }
               className='mt-4 rounded-lg bg-cyan-300 px-4 py-2 text-center text-lg font-semibold text-white transition hover:bg-cyan-400'
             >
               Download CV

@@ -11,7 +11,12 @@ export const event = ({
   label?: string
   value?: number
 }) => {
-  if (!window.gtag) return
+  if (typeof window === 'undefined') return
+
+  if (!window.gtag) {
+    console.warn('GA not initialized yet')
+    return
+  }
 
   window.gtag('event', action, {
     event_category: category,
