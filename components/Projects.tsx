@@ -64,7 +64,7 @@ const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
 
 const Projects = () => {
   return (
-    <section id='projects' className='py-24'>
+    <section id='projects' data-testid='projects-section' className='py-24'>
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
