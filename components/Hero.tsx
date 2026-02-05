@@ -9,7 +9,7 @@ const Hero = () => {
     <section className={'relative overflow-hidden'}>
       <div className={'mx-auto max-w-7xl px-6 sm:py-24 py-10'}>
         <div className={'grid items-center gap-12 md:grid-cols-2'}>
-          <div>
+          <div className='order-2 md:order-1'>
             <TextCycler />
 
             <p className={'mt-5 mb-3'}>
@@ -28,7 +28,7 @@ const Hero = () => {
 
           <div
             className={
-              'relative mx-auto aspect-square w-full max-w-md mt-10 sm:mt-0'
+              'order-1 md:order-2 relative mx-auto aspect-square w-60 sm:w-56 md:w-full max-w-[260px] sm:max-w-xs md:max-w-md mt-6 sm:mt-0 mb-0 pb-0'
             }
           >
             <div className='absolute inset-0 -z-10'>
@@ -37,7 +37,7 @@ const Hero = () => {
                 alt='Temporary profile picture'
                 width={300}
                 height={300}
-                className='h-auto w-full object-cover -mt-20'
+                className='h-auto w-full object-cover -mt-8 sm:-mt-12 md:-mt-20'
                 priority
               />
             </div>
