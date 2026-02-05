@@ -58,7 +58,7 @@ const Contact = () => {
           <a
             href='mailto:sandbox.aceborja@gmail.com'
             className={
-              'rounded-lg py-4 px-6 text-lg font-medium bg-gradient-to-r from-teal-500/10 to-blue-500/10 transition-all duration-300 hover:from-teal-500/20 hover:to-blue-500/20 border border-teal-500/20'
+              'rounded-full py-4 px-6 text-lg font-medium bg-gradient-to-r from-teal-500/10 to-blue-500/10 transition-all duration-300 hover:from-teal-500/20 hover:to-blue-500/20 border border-teal-500/20'
             }
           >
             Say Hello
