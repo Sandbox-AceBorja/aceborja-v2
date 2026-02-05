@@ -24,7 +24,7 @@ const NavBar = () => {
             href='/'
             className='text-2xl font-bold text-foreground hover:text-blue-500 transition'
           >
-            Ace Borja<span className='text-cyan-300'>.</span>
+            Ace Borja<span className='text-teal-300'>.</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,7 +61,7 @@ const NavBar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className='block text-lg font-medium text-foreground hover:text-cyan-500 transition py-2'
+                className='block text-lg font-medium text-foreground hover:text-teal-500 transition py-2'
                 onClick={handleLinkClick}
               >
                 {link.label}
@@ -77,7 +77,7 @@ const NavBar = () => {
                   label: 'Resume PDF',
                 })
               }
-              className='mt-4 rounded-lg bg-cyan-300 px-4 py-2 text-center text-lg font-semibold text-white transition hover:bg-cyan-400'
+              className='mt-4 rounded-lg bg-teal-300 px-4 py-2 text-center text-lg font-semibold text-black transition hover:bg-teal-500'
             >
               Download CV
             </a>
