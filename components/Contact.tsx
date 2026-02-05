@@ -12,14 +12,13 @@ const Contact = () => {
           What's Next
         </div>
         <div className={'mb-10 text-7xl text-center'}>Get In Touch</div>
-        <div className={'text-center'}>
+        <div
+          className={'mx-auto max-w-prose text-center text-lg leading-relaxed'}
+        >
           <span className={'text-teal-300'}>Currently Open</span> to freelance
-          work, collaborations, and full-time opportunities.
-        </div>
-        <div className={'text-center'}>
-          I’m always happy to connect. Whether you have a specific inquiry or
-          just want <br /> to introduce yourself, I’ll do my best to respond
-          promptly.
+          work, collaborations, and full-time opportunities. I’m always happy to
+          connect. Whether you have a specific inquiry or just want to introduce
+          yourself, I’ll do my best to respond promptly.
         </div>
         <div className={'mt-10 text-center'}>
           <a
