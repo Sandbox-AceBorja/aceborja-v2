@@ -1,4 +1,4 @@
-import { Experience, Project } from '@/types'
+import { Experience, Project, ProjectMinor } from '@/types'
 
 // --- Experience Data ---
 export const experienceData: Experience[] = [
@@ -102,7 +102,7 @@ export const projectsData: Project[] = [
 ]
 
 // --- Minor Projects Data ---
-export const minorProjectsData: Project[] = [
+export const minorProjectsData: ProjectMinor[] = [
   {
     title: 'Infinity Tic Tac Toe',
     description:

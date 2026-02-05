@@ -18,7 +18,15 @@ export type Project = {
   title: string
   description: string
   technologies: string[]
-  image?: string // Path to the project image (e.g., '/images/project-saas-platform.jpg')
+  image: string // Path to the project image (e.g., '/images/project-saas-platform.jpg')
+  githubUrl?: string // Optional GitHub link
+  liveUrl?: string // Optional Live Demo link
+}
+
+export type ProjectMinor = {
+  title: string
+  description: string
+  technologies: string[]
   githubUrl?: string // Optional GitHub link
   liveUrl?: string // Optional Live Demo link
 }

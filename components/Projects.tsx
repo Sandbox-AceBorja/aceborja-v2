@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { projectsData, minorProjectsData } from '@/data/portfolio'
 import { Project as ProjectType } from '@/types'
+import { ProjectMinor } from '@/types'
 import { Github, ExternalLink, ChevronDown } from 'lucide-react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -12,7 +13,7 @@ import { Variants } from 'framer-motion'
 const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
   <div className='group relative overflow-hidden rounded-xl bg-gradient-to-br from-card to-card/50 border border-border/50 hover:border-teal-300 transition-transform duration-200 hover:-translate-y-1 hover:shadow-md'>
     {/* Image Container with Gradient Overlay */}
-    <div className='relative  w-full overflow-hidden'>
+    <div className='relative w-full overflow-hidden'>
       <Image
         src={project.image}
         alt={`Preview of ${project.title}`}
@@ -74,7 +75,7 @@ const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
 )
 
 // New smaller template for minor projects
-const MinorProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
+const MinorProjectCard: React.FC<{ project: ProjectMinor }> = ({ project }) => (
   <div className='group relative overflow-hidden rounded-lg border border-border hover:border-teal-300 bg-card/40 shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md p-4'>
     <div className='flex items-start justify-between gap-3'>
       <div className='min-w-0'>
