@@ -83,7 +83,6 @@ export const projectsData: Project[] = [
       'A modern website built with Next.js and TypeScript, featuring a fast, accessible, and responsive UI using Material UI (MUI). It integrates RESTful APIs with MongoDB for dynamic content management and uses server-side rendering to ensure high performance, scalability, and maintainable architecture.',
     technologies: ['Next.js', 'TypeScript', 'React', 'MUI', 'MongoDB'],
     image: '/images/origami-website-main.png',
-    // githubUrl: 'https://github.com/yourusername/ecommerce-store',
     liveUrl: 'https://origami-education.com/',
   },
   {
@@ -92,7 +91,6 @@ export const projectsData: Project[] = [
       'Streamline campus operations with an RFID-powered attendance system. This solution eliminates manual logging by capturing real-time movement at campus entry points and automatically updating CRM records for centralized reporting.',
     technologies: ['RFID', 'PHP', 'CodeIgniter', 'Bootstrap', 'MySQL', 'API'],
     image: '/images/origami-rfid-main.png',
-    // preview: '/images/rfid-attendance.png',
   },
   {
     title: 'School Management & ERP System',
@@ -100,7 +98,57 @@ export const projectsData: Project[] = [
       'A feature-rich platform for managing school transactions and students activities and more. Includes user authentication, payments, and a dashboard. Built with a focus on speed and scalability.',
     technologies: ['PHP', 'CodeIgniter', 'Bootstrap', 'MySQL', 'API'],
     image: '/images/origami-school-management-main.png',
-    // githubUrl: 'https://github.com/yourusername/ecommerce-store',
-    // liveUrl: 'https://ecommerce-store-live.vercel.app',
+  },
+]
+
+// --- Minor Projects Data ---
+export const minorProjectsData: Project[] = [
+  {
+    title: 'Infinity Tic Tac Toe',
+    description:
+      'A modern web-based Tic-Tac-Toe game featuring a vanishing-piece rule where the oldest move disappears after the fourth placement, with dynamic multiplayer support.',
+    technologies: ['Next.js', 'TypeScript', 'Stripe', 'MongoDB'],
+    githubUrl: 'https://github.com/Sandbox-AceBorja/infinity-tictactoe',
+    liveUrl: 'https://infinity-tictactoe.vercel.app/',
+  },
+  {
+    title: 'AI-Math-Problem-Generator',
+    description:
+      'Next.js and TypeScript app that generates Grade 5 math quizzes using the Google Gemini API, validates answers and saved results to Supabase.',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Supabase',
+      'Google Gemini API',
+    ],
+    githubUrl: 'https://github.com/Sandbox-AceBorja/ai-math-problem-generator',
+    liveUrl: 'https://ai-math-problem-generator-flax.vercel.app/',
+  },
+  {
+    title: 'Turks Shawarma System',
+    description:
+      'A point-of-sale system for a local shawarma business, featuring order management, inventory tracking, and sales reporting to streamline operations and improve customer service.',
+    technologies: ['PHP', 'CodeIgniter', 'Bootstrap', 'MySQL'],
+  },
+  {
+    title: 'Diamond Life By RNP Website',
+    description:
+      "A lightweight jewelry website built with WordPress and Elementor, featuring a clean design and optimized for performance and SEO to showcase the brand's collections effectively.",
+    technologies: ['WordPress', 'Elementor', 'Photoshop'],
+  },
+  {
+    title: 'Jewelry Management System',
+    description:
+      'An inventory and sales management system tailored for jewelry businesses, featuring product tracking, sales reporting, and customer management functionalities.',
+    technologies: ['PHP', 'CodeIgniter', 'MySQL', 'Bootstrap'],
+  },
+  {
+    title: 'Font Scroll',
+    description:
+      'A creative web experience that dynamically changes font styles as users scroll through the page, showcasing the power of CSS and JavaScript for interactive design.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/Sandbox-AceBorja/font-scroll',
+    liveUrl: 'https:sandbox-aceborja.github.io/font-scroll',
   },
 ]
