@@ -199,7 +199,7 @@ const Projects = () => {
               onClick={() =>
                 setIsMinorProjectsExpanded(!isMinorProjectsExpanded)
               }
-              className='group flex items-center gap-3 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 px-6 py-4 transition-all duration-300 hover:from-teal-500/20 hover:to-blue-500/20 border border-teal-500/20'
+              className='group flex items-center gap-3 rounded-full bg-gradient-to-r from-teal-500/10 to-blue-500/10 px-6 py-4 transition-all duration-300 hover:from-teal-500/20 hover:to-blue-500/20 border border-teal-500/20'
             >
               <h3 className='text-lg font-bold text-foreground'>
                 Other Projects

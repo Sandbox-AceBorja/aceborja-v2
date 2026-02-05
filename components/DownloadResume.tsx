@@ -18,7 +18,7 @@ const DownloadResume = () => {
       href='/resume/Borja_Eduardo_Ace_Resume.pdf'
       download
       onClick={handleClick}
-      className='rounded-lg bg-teal-300 px-4 py-2 text-sm font-semibold text-black transition hover:bg-teal-500 inline-flex items-center gap-0.5'
+      className='px-4 py-2 text-sm font-semibold inline-flex rounded-full bg-gradient-to-r from-teal-500/10 to-blue-500/10 transition-all duration-300 hover:from-teal-500/20 hover:to-blue-500/20 border border-teal-500/20'
     >
       Download CV
     </a>

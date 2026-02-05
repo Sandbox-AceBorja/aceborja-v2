@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { experienceData } from '@/data/portfolio'
 import { Experience as ExperienceType } from '@/types'
-import { Briefcase, ChevronDown, ChevronUp } from 'lucide-react'
+import { Briefcase, ChevronDown } from 'lucide-react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Variants } from 'framer-motion'
@@ -127,21 +127,22 @@ const Experience = () => {
 
           {/* Show More / Show Less Button */}
           {hasMore && (
-            <div className='flex justify-center mt-8'>
+            <div className='flex justify-center mt-12'>
               <button
                 onClick={handleToggle}
-                className='inline-flex items-center justify-center rounded-full bg-teal-600 px-6 py-2 text-sm font-medium text-white shadow-lg transition-colors hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                className='group flex items-center gap-3 rounded-full bg-gradient-to-r from-teal-500/10 to-blue-500/10 px-6 py-4 transition-all duration-300 hover:from-teal-500/20 hover:to-blue-500/20 border border-teal-500/20'
               >
-                {isExpanded ? (
-                  <>
-                    Show Less <ChevronUp size={16} className='ml-2' />
-                  </>
-                ) : (
-                  <>
-                    Show More ({experienceData.length - visibleCount} more)
-                    <ChevronDown size={16} className='ml-2' />
-                  </>
-                )}
+                <span className='text-lg font-bold text-foreground'>
+                  {isExpanded
+                    ? 'Show Less'
+                    : `Show More (${experienceData.length - visibleCount} more)`}
+                </span>
+                <motion.div
+                  animate={{ rotate: isExpanded ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDown size={24} className='text-teal-300' />
+                </motion.div>
               </button>
             </div>
           )}

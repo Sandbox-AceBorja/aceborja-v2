@@ -77,7 +77,8 @@ const NavBar = () => {
                   label: 'Resume PDF',
                 })
               }
-              className='mt-4 rounded-lg bg-teal-300 px-4 py-2 text-center text-lg font-semibold text-black transition hover:bg-teal-500'
+              //   className='mt-4 rounded-lg bg-teal-300 px-4 py-2 text-center text-lg font-semibold text-black transition hover:bg-teal-500'
+              className='mt-4 px-4 py-2 text-center text-lg font-semibold rounded-full bg-gradient-to-r from-teal-500/10 to-blue-500/10 transition-all duration-300 hover:from-teal-500/20 hover:to-blue-500/20 border border-teal-500/20'
             >
               Download CV
             </a>

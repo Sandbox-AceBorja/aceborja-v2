@@ -20,7 +20,7 @@ const Footer = () => {
             href='https://github.com/sandbox-aceborja'
             target='_blank'
             rel='noopener noreferrer'
-            className='text-muted-foreground hover:text-foreground transition'
+            className='text-muted-foreground hover:text-teal-300 transition'
             aria-label='GitHub Profile'
           >
             <Github size={20} />
@@ -29,7 +29,7 @@ const Footer = () => {
             href='https://linkedin.com/in/sandbox-aceborja'
             target='_blank'
             rel='noopener noreferrer'
-            className='text-muted-foreground hover:text-foreground transition'
+            className='text-muted-foreground hover:text-teal-300 transition'
             aria-label='LinkedIn Profile'
           >
             <Linkedin size={20} />
@@ -38,7 +38,7 @@ const Footer = () => {
             href='https://x.com/AceBorja7'
             target='_blank'
             rel='noopener noreferrer'
-            className='text-muted-foreground hover:text-foreground transition'
+            className='text-muted-foreground hover:text-teal-300 transition'
             aria-label='Twitter Profile'
           >
             <Twitter size={20} />
