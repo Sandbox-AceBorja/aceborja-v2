@@ -72,7 +72,7 @@ const TerminalDisplay = () => {
       <div className='p-4 space-y-4'>
         <TerminalLine
           command='getDeveloper.role'
-          output={<span className='text-cyan-400'>"{coder.name}"</span>}
+          output={<span className='text-teal-400'>"{coder.name}"</span>}
         />
 
         <TerminalLine
@@ -120,9 +120,9 @@ const TerminalDisplay = () => {
                   <>
                     <Zap
                       size={18}
-                      className='inline-block mr-2 text-cyan-400'
+                      className='inline-block mr-2 text-teal-400'
                     />
-                    <span className='text-cyan-400'>Status: Available</span>
+                    <span className='text-teal-400'>Status: Available</span>
                   </>
                 ) : (
                   <>
@@ -147,7 +147,7 @@ const About = () => {
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
-          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-cyan-300'>
+          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-teal-300'>
             About Me
           </p>
 

@@ -26,7 +26,7 @@ const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
         {project.technologies.map((tech) => (
           <span
             key={tech}
-            className='rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-300'
+            className='rounded-full bg-teal-500/10 px-3 py-1 text-xs font-medium text-teal-300'
           >
             {tech}
           </span>
@@ -68,7 +68,7 @@ const Projects = () => {
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
-          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-cyan-300'>
+          <p className='mb-3 text-sm font-semibold uppercase tracking-wider text-teal-300'>
             Portfolio
           </p>
 
