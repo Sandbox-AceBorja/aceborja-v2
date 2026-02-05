@@ -1,9 +1,12 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { experienceData } from '@/data/portfolio'
 import { Experience as ExperienceType } from '@/types'
 import { Briefcase, ChevronDown, ChevronUp } from 'lucide-react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { Variants } from 'framer-motion'
 
 // Define the number of items to show initially
 const INITIAL_VISIBLE_ITEMS = 2
@@ -49,6 +52,28 @@ const ExperienceItem: React.FC<{ item: ExperienceType }> = ({ item }) => (
 // --- Experience Component (Revised) ---
 
 const Experience = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView({
+    threshold: 0.2, // triggers when 20% of the section is visible
+  })
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible')
+    } else {
+      controls.start('hidden')
+    }
+  }, [controls, inView])
+
+  const sectionVariants: Variants = {
+    hidden: { opacity: 0, y: 50 }, // fade out & slide down
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' as const },
+    },
+  }
+
   // State to manage the number of visible items
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_ITEMS)
 
@@ -74,7 +99,14 @@ const Experience = () => {
   }
 
   return (
-    <section id='experience' className='py-24'>
+    <motion.section
+      id='experience'
+      ref={ref}
+      variants={sectionVariants}
+      initial='hidden'
+      animate={controls}
+      className='py-24'
+    >
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
@@ -115,7 +147,7 @@ const Experience = () => {
           )}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

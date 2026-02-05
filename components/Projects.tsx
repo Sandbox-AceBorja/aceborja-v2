@@ -1,8 +1,13 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { projectsData } from '@/data/portfolio'
 import { Project as ProjectType } from '@/types'
 import { Github, ExternalLink } from 'lucide-react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { Variants } from 'framer-motion'
 
 const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
   <div className='relative overflow-hidden rounded-xl border border-border bg-card shadow-lg transition-transform duration-300 hover:scale-[1.02]'>
@@ -63,8 +68,38 @@ const ProjectCard: React.FC<{ project: ProjectType }> = ({ project }) => (
 )
 
 const Projects = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView({
+    threshold: 0.2, // triggers when 20% of the section is visible
+  })
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible')
+    } else {
+      controls.start('hidden')
+    }
+  }, [controls, inView])
+
+  const sectionVariants: Variants = {
+    hidden: { opacity: 0, y: 50 }, // fade out & slide down
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' as const },
+    },
+  }
+
   return (
-    <section id='projects' data-testid='projects-section' className='py-24'>
+    <motion.section
+      id='projects'
+      ref={ref}
+      variants={sectionVariants}
+      initial='hidden'
+      animate={controls}
+      data-testid='projects-section'
+      className='py-24'
+    >
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
@@ -88,7 +123,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

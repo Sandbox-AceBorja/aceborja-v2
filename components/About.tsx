@@ -1,5 +1,10 @@
-import React from 'react'
-import { Terminal, Code, DollarSign, Zap, Brain, Check, X } from 'lucide-react'
+'use client'
+
+import { Terminal, Zap, Check, X } from 'lucide-react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import React, { useEffect } from 'react'
+import { Variants } from 'framer-motion'
 
 // Define the developer data object
 const coder = {
@@ -142,8 +147,36 @@ const TerminalDisplay = () => {
 // --- About Component (Revised) ---
 
 const About = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView({
+    threshold: 0.2, // triggers when 20% of the section is visible
+  })
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible')
+    } else {
+      controls.start('hidden')
+    }
+  }, [controls, inView])
+
+  const sectionVariants: Variants = {
+    hidden: { opacity: 0, y: 50 }, // fade out & slide down
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' as const },
+    },
+  }
   return (
-    <section id='about' className='py-24'>
+    <motion.section
+      id='about'
+      ref={ref}
+      variants={sectionVariants}
+      initial='hidden'
+      animate={controls}
+      className='py-24'
+    >
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='mb-16 max-w-2xl'>
@@ -187,7 +220,7 @@ const About = () => {
           <TerminalDisplay />
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
