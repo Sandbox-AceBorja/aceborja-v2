@@ -7,6 +7,7 @@ import { MapPin } from 'lucide-react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Variants } from 'framer-motion'
+import { Github, Linkedin, Twitter } from 'lucide-react'
 
 const Hero = () => {
   const controls = useAnimation()
@@ -43,9 +44,9 @@ const Hero = () => {
         <div className={'grid items-center gap-12 md:grid-cols-2'}>
           <div className='order-2 md:order-1'>
             <motion.div
-              initial={{ opacity: 0, y: -50 }} // starting state
-              animate={{ opacity: 1, y: 0 }} // animate to
-              transition={{ duration: 0.8 }} // animation duration
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               style={{
                 color: 'white',
               }}
@@ -59,10 +60,42 @@ const Hero = () => {
                 that drive impactful results.
               </p>
 
-              <p className='my-4 inline-flex items-center gap-1 rounded-full bg-blue-500/10 px-4 py-1 text-sm font-medium text-white'>
-                <MapPin size={14} className='shrink-0 text-neutral-300' />
-                <span className='text-neutral-300'>Philippines</span>
-              </p>
+              <div className='flex items-center gap-3 mt-4'>
+                <p className='inline-flex items-center gap-1 rounded-full bg-teal-500/10 px-4 py-1 text-sm font-medium text-white'>
+                  <MapPin size={14} className='shrink-0 text-neutral-300' />
+                  <span className='text-neutral-300'>Philippines</span>
+                </p>
+
+                <div className='flex items-center gap-2 ml-2'>
+                  <a
+                    href='https://github.com/sandbox-aceborja'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='p-2 rounded-full bg-neutral-800/50 hover:bg-teal-500/10 hover:text-teal-300 transition-colors'
+                    aria-label='GitHub Profile'
+                  >
+                    <Github size={12} />
+                  </a>
+                  <a
+                    href='https://linkedin.com/in/sandbox-aceborja'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='p-2 rounded-full bg-neutral-800/50 hover:bg-teal-500/10 hover:text-teal-300 transition-colors'
+                    aria-label='LinkedIn Profile'
+                  >
+                    <Linkedin size={12} />
+                  </a>
+                  <a
+                    href='https://x.com/AceBorja7'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='p-2 rounded-full bg-neutral-800/50 hover:bg-teal-500/10 hover:text-teal-300 transition-colors'
+                    aria-label='Twitter Profile'
+                  >
+                    <Twitter size={12} />
+                  </a>
+                </div>
+              </div>
             </motion.div>
           </div>
 
