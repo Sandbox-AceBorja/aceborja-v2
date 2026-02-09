@@ -80,7 +80,7 @@ export const projectsData: Project[] = [
   {
     title: 'Origami Education Website',
     description:
-      'A modern website built with Next.js and TypeScript, featuring a fast, accessible, and responsive UI using Material UI (MUI). It integrates RESTful APIs with MongoDB for dynamic content management and uses server-side rendering to ensure high performance, scalability, and maintainable architecture.',
+      'A modern, responsive web application built with Next.js and TypeScript, focusing on performance, accessibility, and maintainability for educational institutions.',
     technologies: ['Next.js', 'TypeScript', 'React', 'MUI', 'MongoDB'],
     image: '/images/origami-website-main.png',
     liveUrl: 'https://origami-education.com/',
@@ -88,14 +88,14 @@ export const projectsData: Project[] = [
   {
     title: 'RFID Attendance Monitoring System',
     description:
-      'Streamline campus operations with an RFID-powered attendance system. This solution eliminates manual logging by capturing real-time movement at campus entry points and automatically updating CRM records for centralized reporting.',
+      'An automated system for facility access management and operational monitoring. This solution captures real-time entry data at key checkpoints and integrates with centralized management systems for comprehensive reporting and analytics.',
     technologies: ['RFID', 'PHP', 'CodeIgniter', 'Bootstrap', 'MySQL', 'API'],
     image: '/images/origami-rfid-main.png',
   },
   {
     title: 'School Management & ERP System',
     description:
-      'A feature-rich platform for managing school transactions and students activities and more. Includes user authentication, payments, and a dashboard. Built with a focus on speed and scalability.',
+      'A comprehensive platform for managing institutional operations, user management, and transaction processing. Includes authentication, payment integration, and analytics dashboards with focus on performance and scalability.',
     technologies: ['PHP', 'CodeIgniter', 'Bootstrap', 'MySQL', 'API'],
     image: '/images/origami-school-management-main.png',
   },
